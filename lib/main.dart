@@ -1,7 +1,12 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:rental_car_app/screens/onboarding.dart';
+import 'package:rental_car_app/firebase_options.dart';
+import 'package:rental_car_app/presentation/screens/onboarding.dart';
 
-void main() {
+void main() async {
+  // Initializing firebase data
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
