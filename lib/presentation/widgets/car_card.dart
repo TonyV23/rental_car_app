@@ -10,6 +10,16 @@ class CarCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+          color: Color(0xffF3F3F3),
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 10,
+              spreadRadius: 5,
+            )
+          ]),
       child: Column(
         children: [
           Image.asset(
@@ -39,6 +49,10 @@ class CarCard extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+          Text(
+            '\$${car.pricePerHour.toStringAsFixed(2)}/hr',
+            style: TextStyle(fontSize: 16),
           )
         ],
       ),
