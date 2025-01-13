@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rental_car_app/presentation/screens/car_list.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
@@ -45,7 +46,12 @@ class Onboarding extends StatelessWidget {
                     width: 320,
                     height: 54,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CarList()));
+                        },
                         style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
                             backgroundColor: Colors.white),
