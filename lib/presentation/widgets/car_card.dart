@@ -11,7 +11,14 @@ class CarCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => CarDetails()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => CarDetails(
+                    car: Car(
+                        model: car.model,
+                        distance: car.distance,
+                        fuelCapacity: car.fuelCapacity,
+                        pricePerHour: car.pricePerHour))));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),

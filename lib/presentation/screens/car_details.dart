@@ -5,7 +5,8 @@ import 'package:rental_car_app/presentation/widgets/car_card.dart';
 import 'package:rental_car_app/presentation/widgets/more_card.dart';
 
 class CarDetails extends StatelessWidget {
-  const CarDetails({super.key});
+  final Car car;
+  const CarDetails({super.key, required this.car});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,10 @@ class CarDetails extends StatelessWidget {
           children: [
             CarCard(
                 car: Car(
-                    model: "Ractis",
-                    distance: 120,
-                    fuelCapacity: 42,
-                    pricePerHour: 23)),
+                    model: "-1${car.model}",
+                    distance: car.distance + 100,
+                    fuelCapacity: car.fuelCapacity + 200,
+                    pricePerHour: car.pricePerHour + 300)),
             Gap(20),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -87,26 +88,26 @@ class CarDetails extends StatelessWidget {
                 children: [
                   MoreCard(
                     car: Car(
-                        model: "Probox",
-                        distance: 25,
-                        fuelCapacity: 18,
-                        pricePerHour: 24),
+                        model: "-2${car.model}",
+                        distance: car.distance + 100,
+                        fuelCapacity: car.fuelCapacity + 200,
+                        pricePerHour: car.pricePerHour + 300),
                   ),
                   Gap(15),
                   MoreCard(
                     car: Car(
-                        model: "Probox",
-                        distance: 25,
-                        fuelCapacity: 18,
-                        pricePerHour: 24),
+                        model: "-3${car.model}",
+                        distance: car.distance + 100,
+                        fuelCapacity: car.fuelCapacity + 200,
+                        pricePerHour: car.pricePerHour + 300),
                   ),
                   Gap(15),
                   MoreCard(
                     car: Car(
-                        model: "Probox",
-                        distance: 25,
-                        fuelCapacity: 18,
-                        pricePerHour: 24),
+                        model: "-4${car.model}",
+                        distance: car.distance,
+                        fuelCapacity: car.fuelCapacity,
+                        pricePerHour: car.pricePerHour),
                   ),
                 ],
               ),
