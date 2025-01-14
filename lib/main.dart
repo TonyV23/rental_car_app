@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:rental_car_app/firebase_options.dart';
-import 'package:rental_car_app/presentation/screens/car_list.dart';
 import 'package:rental_car_app/presentation/screens/onboarding.dart';
 
 void main() async {
