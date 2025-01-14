@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1069146745414:android:b9a5835fed4e8264e4f847",
+        "mobilesdk_app_id": "1:1069146745414:android:1a39484eb7de3b32e4f847",
         "android_client_info": {
-          "package_name": "com.viper23.ren"
+          "package_name": "com.example.rental_car_app"
         }
       },
       "oauth_client": [],
