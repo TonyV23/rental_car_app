@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:rental_car_app/data/models/car.dart';
 import 'package:rental_car_app/presentation/widgets/car_card.dart';
+import 'package:rental_car_app/presentation/widgets/more_card.dart';
 
 class CarDetails extends StatelessWidget {
   const CarDetails({super.key});
@@ -75,6 +76,37 @@ class CarDetails extends StatelessWidget {
                                 spreadRadius: 5)
                           ]),
                     ),
+                  ),
+                ],
+              ),
+            ),
+            Gap(20),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  MoreCard(
+                    car: Car(
+                        model: "Probox",
+                        distance: 25,
+                        fuelCapacity: 18,
+                        pricePerHour: 24),
+                  ),
+                  Gap(15),
+                  MoreCard(
+                    car: Car(
+                        model: "Probox",
+                        distance: 25,
+                        fuelCapacity: 18,
+                        pricePerHour: 24),
+                  ),
+                  Gap(15),
+                  MoreCard(
+                    car: Car(
+                        model: "Probox",
+                        distance: 25,
+                        fuelCapacity: 18,
+                        pricePerHour: 24),
                   ),
                 ],
               ),
