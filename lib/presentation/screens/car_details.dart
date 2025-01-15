@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:rental_car_app/data/models/car.dart';
+import 'package:rental_car_app/presentation/screens/map_details.dart';
 import 'package:rental_car_app/presentation/widgets/car_card.dart';
 import 'package:rental_car_app/presentation/widgets/more_card.dart';
 
@@ -63,19 +64,24 @@ class CarDetails extends StatelessWidget {
                   ),
                   Gap(20),
                   Expanded(
-                    child: Container(
-                      height: 170,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                              image: AssetImage("assets/maps.png"),
-                              fit: BoxFit.cover),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 10,
-                                spreadRadius: 5)
-                          ]),
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => MapDetails(car: car)));
+                      },
+                      child: Container(
+                        height: 170,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                                image: AssetImage("assets/maps.png"),
+                                fit: BoxFit.cover),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+                                  spreadRadius: 5)
+                            ]),
+                      ),
                     ),
                   ),
                 ],
